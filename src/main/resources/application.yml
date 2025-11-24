@@ -5,13 +5,12 @@ spring:
   application:
     name: eureka-server
 
+## Eureka Server Configuration
 eureka:
-  instance:
-    prefer-ip-address: false
-
   client:
-    register-with-eureka: false
-    fetch-registry: false
-
+    registerWithEureka: false
+    fetchRegistry: false
+  instance:
+    hostname: ${EUREKA_HOST:localhost}
   server:
-    enable-self-preservation: false
+    renewal-percent-threshold: 0.90
