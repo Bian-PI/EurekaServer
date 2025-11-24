@@ -1,16 +1,12 @@
 server:
-  port: ${PORT:8761}
+  port: 8761
 
 spring:
   application:
-    name: eureka-server
+    name:
+      EurekaServer
 
-## Eureka Server Configuration
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-  instance:
-    hostname: ${EUREKA_HOST:localhost}
-  server:
-    renewal-percent-threshold: 0.90
+    register-with-eureka: false
+    fetch-registry: false
